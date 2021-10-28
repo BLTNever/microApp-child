@@ -24,7 +24,6 @@ window.addEventListener('unmount', function () {
     console.log('子应用 micro-app 环境中卸载>>>>')
     ReactDOM.unmountComponentAtNode(root)
 })
-console.log(111111, window.__MICRO_APP_BASE_ROUTE__)
 const render = (Comp: React.SFC) => {
     ReactDOM.render(
         <Provider store={store}>

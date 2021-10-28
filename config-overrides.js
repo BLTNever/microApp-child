@@ -93,13 +93,13 @@ module.exports = {
             libraryDirectory: 'es',
             style: true
         }),
-        // (config) => {
-        //     config.output = config.output || {}
-        //     config.output.library = packageName
-        //     config.output.libraryTarget = 'umd'
-        //     config.output.jsonpFunction = `webpackJsonp_${packageName}`
-        //     return config
-        // },
+        (config) => {
+            config.output = config.output || {}
+            config.output.library = packageName
+            config.output.libraryTarget = 'umd'
+            config.output.jsonpFunction = `webpackJsonp_${packageName}`
+            return config
+        },
     ),
     devServer: overrideDevServer(watchAll(), (config) => {
         config.headers = {
